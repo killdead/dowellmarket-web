@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin_manifest>
+	<field key="author" value="doWell Market" />
+	<field key="version" value="1" />
+	<field key="description" value="Extends topbar functionality" />
+	<field key="copyright" value="DoWell Market" />
+	<field key="licence" value="" />
+	<field key="elgg_version" value="1.8" />
+</plugin_manifest>
