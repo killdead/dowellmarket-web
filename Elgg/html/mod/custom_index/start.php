@@ -5,6 +5,8 @@
  */
 
 require_once(dirname(__FILE__) . "/lib/events.php");
+require_once(dirname(__FILE__) . "/lib/webservices/core.php");
+require_once(dirname(__FILE__) . "/lib/webservices/user.php");
 
 
 function custom_index_init() {
