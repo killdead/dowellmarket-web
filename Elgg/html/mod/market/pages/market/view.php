@@ -44,7 +44,7 @@ if ($marketpost = get_entity($post)) {
 }
 	
 // Show market sidebar
-$sidebar = elgg_view("market/sidebar");
+$sidebar = elgg_view("market/sidebar/view");
 
 $params = array(
 		'content' => $content,

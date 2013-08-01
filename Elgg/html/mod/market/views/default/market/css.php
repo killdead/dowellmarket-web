@@ -52,3 +52,18 @@ border: 1px solid #432279;
     box-shadow: 2px 2px 4px #FBF8FF;
     margin-bottom:8px;
 }
+
+
+.market-view {
+	padding: 5px;
+	-webkit-box-shadow: 2px -1px 10px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow:  2px -11px 10px rgba(0, 0, 0, 0.25);
+	box-shadow:  2px -1px 10px rgba(0, 0, 0, 0.25);
+	    -moz-border-radius:5px;
+-webkit-border-radius:8px;
+border-radius:6px;
+margin-bottom: 15px;
+margin-top: 10px;
+
+border: 1px solid #432279;
+}

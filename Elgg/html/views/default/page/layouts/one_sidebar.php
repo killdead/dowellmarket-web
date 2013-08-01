@@ -28,10 +28,10 @@ $nav = elgg_extract('nav', $vars, elgg_view('navigation/breadcrumbs'));
 			echo elgg_view('page/elements/sidebar', $vars);
 		?>
 	</div>
-
-	<div class="elgg-main elgg-body">
+    <div><?php echo $nav;?></div>
+	<div class="elgg-main elgg-body market-view">
 		<?php
-			echo $nav;
+			
 			
 			if (isset($vars['title'])) {
 				echo elgg_view_title($vars['title']);

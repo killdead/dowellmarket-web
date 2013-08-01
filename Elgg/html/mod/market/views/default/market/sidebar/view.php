@@ -1,0 +1,5 @@
+<?php
+/**
+ * Market sidebar
+ */
+

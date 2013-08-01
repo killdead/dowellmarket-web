@@ -63,16 +63,33 @@ function custom_index_owner_block_menu($hook, $type, $return, $params) {
 		$return[] = new ElggMenuItem('1all', elgg_echo('market:everyone'), 'market');
 		}
 		
+		
+		$owner = elgg_get_page_owner_entity();
+		
+		if($owner->getGUID() != elgg_get_logged_in_user_guid()) {
+		
 		$url = "market/owned/{$params['entity']->username}";
-		$item = new ElggMenuItem('1market', elgg_echo('market'), $url);
+		$item = new ElggMenuItem('1market', elgg_echo('market:owner'), $url);
 		$return[] = $item;
 
 
 		// Annonces de mon CGP
 		$url = "market/group/{$params['entity']->groupguid}";
-		$item = new ElggMenuItem('2marketgroup', elgg_echo('market:group'), $url);
+		$item = new ElggMenuItem('2marketgroup', elgg_echo('market:group:everyone'), $url);
 		$return[] = $item;
-
+		}
+		else
+		{
+			$url = "market/owned/{$params['entity']->username}";
+			$item = new ElggMenuItem('1market', elgg_echo('market:mine'), $url);
+			$return[] = $item;
+			
+			
+			// Annonces de mon CGP
+			$url = "market/group/{$params['entity']->groupguid}";
+			$item = new ElggMenuItem('2marketgroup', elgg_echo('market:group:mine'), $url);
+			$return[] = $item;
+		}
 
 
 	}
