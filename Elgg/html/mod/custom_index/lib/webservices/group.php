@@ -16,10 +16,14 @@
  * @return array
  */    				
 function group_get_groups($context, $username, $limit, $offset){
-	if(!$username){
+	if(!isset($username)){
 		$user = get_loggedin_user();
 	} else {
 		$user = get_user_by_username($username);
+	}
+	
+	if(!isset($limit)) {
+		$limit = 5;
 	}
 	
 	if($context == "all"){

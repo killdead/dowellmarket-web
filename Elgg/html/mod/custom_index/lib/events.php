@@ -52,8 +52,10 @@ function custom_index_handle_join_site($event, $type, $relationship){
 			$ia = elgg_set_ignore_access(true);
 
 			$group = get_entity($user->groupguid);
-
-			$group->join($user);
+					
+			
+			// @todo - custom index join user to group 
+			//$group->join($user);
 						// restore access settings
 			elgg_set_ignore_access($ia);
 		}
