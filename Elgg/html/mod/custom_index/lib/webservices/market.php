@@ -26,6 +26,8 @@ $markets = null;
 		foreach($markets as $single){
 			$market['guid'] = $single->guid;
 			$market['name'] = $single->title;			
+			$market['price'] = $single->price;
+			$market['city'] = $single->city;
 			$return[] = $market;
 		}
 	}
