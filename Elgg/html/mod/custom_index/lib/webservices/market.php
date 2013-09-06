@@ -11,7 +11,7 @@ $markets = null;
 			'full_view' => false,
 	);
 	
-	if(!isset($context) && $context != "all") {
+	if(isset($context) && $context != "all") {
 	$options['metadata_name'] = "marketcategory";
 	$options['metadata_value'] = $context;
 	$markets = elgg_get_entities_from_metadata($options);
