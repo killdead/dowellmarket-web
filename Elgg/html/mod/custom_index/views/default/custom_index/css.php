@@ -65,6 +65,7 @@ box-shadow:0px 3px 10px black inset;
 body {
 	background-color: #fbf8ff; 
 	/*background-color:#c9d7e4;*/
+	font-family: "Century Gothic","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -330,5 +331,32 @@ height:900px;
 	/*color: white;*/
 	text-decoration: none;
 }
+
+.accroche  ul {
+	list-style: circle;
+}
+
+
+
+.footer {
+height: auto;
+line-height: 12px;
+padding-top: 35px;
+position: relative;
+z-index: 999;
+margin:auto;
+width:980px;
+}
+.footer ul {
+padding-left: 10px;
+width: 195px;
+float: left;
+}
+
+.footer h2 {
+color:white;
+font-size:1.4em;
+}
+
 
 
