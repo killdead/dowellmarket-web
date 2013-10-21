@@ -5,7 +5,7 @@
 	require_once "{$CONFIG->pluginspath}elgg_social_login/settings.php"; 
 
 	// display "Or connect with" message, or not.. ?
-	echo "<div style='padding:10px;padding-top:0px;margin-top:0px;'><div style='padding:10px;padding-left:0px;color:#432279'><b>Or connect with:</b></div>";
+	echo "<div style='padding:10px;padding-top:0px;margin-top:0px;'><div style='padding:10px;padding-left:0px;color:#432279'><b>Ou se connecter avec :</b></div>";
 
 	// display provider icons
 	foreach( $HA_SOCIAL_LOGIN_PROVIDERS_CONFIG AS $item ){
