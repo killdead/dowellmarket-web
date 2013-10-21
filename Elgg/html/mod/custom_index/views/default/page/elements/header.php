@@ -13,7 +13,7 @@ echo elgg_view('page/elements/header_logo', $vars);
 </div>
 <?php if(!elgg_is_logged_in()) {?>
 <div style="float:left;padding-top:30px;" class="top_resume">
-Un réseau social accélérateur de business sur le marché de l’immobilier dédié aux CGP<br>
+Le réseau professionnel accélérateur de business sur le marché de Gestion de Patrimoine Indépendant <br>
 Un contact, une photo, un prix, un click !</div>
 <?php }?>
 <div style="float: left;">
