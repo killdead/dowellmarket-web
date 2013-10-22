@@ -3473,6 +3473,7 @@ box-shadow:0px 3px 10px black inset;
 body {
 	background-color: #fbf8ff; 
 	/*background-color:#c9d7e4;*/
+	font-family: "Century Gothic","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -3739,6 +3740,46 @@ height:900px;
 	text-decoration: none;
 }
 
+.accroche  ul {
+	list-style: circle;
+}
+
+/***** PAGE FOOTER ******/
+
+.elgg-page-footer {
+	position: relative;
+}
+
+.elgg-page-footer a {
+	color: #666;
+	text-decoration:none;
+}
+
+.elgg-page-footer a:hover {
+	color: white;
+}
+
+.footer {
+height: auto;
+line-height: 12px;
+padding-top: 35px;
+position: relative;
+z-index: 999;
+margin:auto;
+width:980px;
+}
+.footer ul {
+padding-left: 10px;
+width: 240px;
+float: left;
+}
+
+.footer h2 {
+color:white;
+font-size:1.4em;
+}
+
+
 
 
 @font-face {
@@ -3910,4 +3951,6 @@ text-align:center;
     to {
         -ms-transform: translateY(0%);
     }
+}.elgg-icon-contact-this {
+	background: url(http://localhost/elgg/mod/contactus/graphics/contact.png) no-repeat left top;
 }

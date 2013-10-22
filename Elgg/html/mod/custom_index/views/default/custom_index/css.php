@@ -362,7 +362,7 @@ width:980px;
 }
 .footer ul {
 padding-left: 10px;
-width: 195px;
+width: 240px;
 float: left;
 }
 
