@@ -336,7 +336,20 @@ height:900px;
 	list-style: circle;
 }
 
+/***** PAGE FOOTER ******/
 
+.elgg-page-footer {
+	position: relative;
+}
+
+.elgg-page-footer a {
+	color: #666;
+	text-decoration:none;
+}
+
+.elgg-page-footer a:hover {
+	color: white;
+}
 
 .footer {
 height: auto;
