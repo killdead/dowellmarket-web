@@ -127,7 +127,8 @@ function market_owner_block_menu($hook, $type, $return, $params) {
 		
 		
 		//Uniquement mes annonces
-		$url = "market/owner/{$params['entity']->username}";
+		//$url = "market/owner/{$params['entity']->username}";
+		$url = "market/mine";
 		$item = new ElggMenuItem('1market', elgg_echo('market'), $url);
 		$return[] = $item;
 		
@@ -175,7 +176,7 @@ function market_page_menu($hook, $type, $return, $params) {
 
 			// $return[] = new ElggMenuItem('1all', elgg_echo('market:everyone'), 'market');
 			$return[] = new ElggMenuItem('4friends', elgg_echo('market:friends'), 'market/friends/' . $user->username);
-			$return[] = new ElggMenuItem('3mine', elgg_echo('market:mine'), 'market/owned/' . $user->username);
+			$return[] = new ElggMenuItem('3mine', elgg_echo('market:mine'), 'market/mine');
 			$return[] = new ElggMenuItem('5group', elgg_echo('market:group'), 'market/group/'.$user->groupguid);
 		}
 	}
