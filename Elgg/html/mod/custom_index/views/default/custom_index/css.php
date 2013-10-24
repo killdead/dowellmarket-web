@@ -305,6 +305,10 @@ input[type=text]:focus, textarea:focus, select:focus {
 	color:#333;
 }
 
+.elgg-input-file {
+width:300px;
+}
+
 .joinus {
 color:white;
 background-color:#33CC33;

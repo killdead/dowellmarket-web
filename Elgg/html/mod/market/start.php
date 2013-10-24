@@ -61,6 +61,8 @@ function market_page_handler($page) {
 		$page[0] = 'all';
 	}
 
+	$user = elgg_get_logged_in_user_entity();
+	
 	$page_type = $page[0];
 	switch ($page_type) {
 		case 'owned':
@@ -92,6 +94,10 @@ function market_page_handler($page) {
 		case 'category':
 			set_input('cat', $page[1]);
 			include "$pages/category.php";
+			break;
+		case 'mine':
+			set_input('username', $user->username);
+			include "$pages/owned.php";
 			break;
 		default:
 			include "$pages/category.php";
