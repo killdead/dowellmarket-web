@@ -320,7 +320,7 @@ $french = array(
 	'friends' => "Contacts",
 	'friends:yours' => "Vos contacts",
 	'friends:owned' => "Les contacts de %s",
-	'friend:add' => "Ajouter un contact",
+	'friend:add' => "Ajouter comme contact",
 	'friend:remove' => "Supprimer un contact",
 
 	'friends:add:successful' => "Vous avez ajouté %s à vos contacts.",
