@@ -375,5 +375,12 @@ color:white;
 font-size:1.4em;
 }
 
+.search-input {
+witdh:80px;
+}
+
+.elgg-page-header {
+height:160px;
+}
 
 

@@ -25,3 +25,4 @@ Un contact, une photo, un prix, un click !</div>
 echo elgg_view_menu('site');?>
 
 </div>
+<br>
