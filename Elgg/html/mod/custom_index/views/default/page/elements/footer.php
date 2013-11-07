@@ -28,11 +28,11 @@ $powered_url = elgg_get_site_url() . "_graphics/powered_by_elgg_badge_drk_bckgnd
     <li><span><a href="/conditions-generales">Conditions générales d'utilisation</a></span></li>
     <li><span><a href="/mentions-legales"> Mentions légales</a></span></li>
   </ul>
-   <ul class="col-3">
+   <!--  <ul class="col-3">
     <h2>Services</h2>
     <li><span><a href="/deposer-une-annonce">Déposer une annonce</a></span></li>
     <li><span><a href="/rechercher-un-produit">Rechercher un produit</a></span></li>
     <li><span><a href="/systeme-de-credit">Le système de crédit</a></span></li>
-  </ul>
+  </ul>-->
     <br class="clearfloat">
 </div>
