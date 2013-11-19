@@ -226,7 +226,7 @@ color: #432279;
 }
 
 .top_resume {
-font-size:1.8em;
+font-size:1.4em;
 line-height:30px;
 	color:#432279;
 
