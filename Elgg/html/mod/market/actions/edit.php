@@ -22,7 +22,12 @@ $body = get_input('marketbody');
 $access = get_input('access_id');
 $tags = get_input('markettags');
 $nbpiece = get_input('marketnbpiece');
+$nbpiece = get_input('marketnbpiece');
+$etage = get_input('marketetage');
+$superficie = get_input('marketland');
 $city = get_input('marketcity');
+$zip = get_input('marketzip');
+$year = get_input('marketyear');
 		
 // Make sure we actually have permission to edit
 $market = get_entity($guid);
@@ -35,8 +40,14 @@ if ($market->getSubtype() == "market" && $market->canEdit()) {
 	$_SESSION['marketcustom'] = $custom;
 	$_SESSION['markettags'] = $tags;
 	$_SESSION['marketcategory'] = $category;
+	$_SESSION['markettags'] = $tags;
 	$_SESSION['marketnbpiece'] = $nbpiece;
-	$_SESSION['marketcity'] = $city;
+	$_SESSION['marketetage'] =$etage;
+	$_SESSION['marketland']=$superficie;
+	$_SESSION['marketcity']=$city ;
+	$_SESSION['marketzip']=$zip;
+	$_SESSION['marketyear']=$year;
+	
 	
 	// Convert string of tags into a preformatted array
 	$tagarray = string_to_tag_array($tags);
@@ -59,8 +70,13 @@ if ($market->getSubtype() == "market" && $market->canEdit()) {
 		$market->price = $price;
 		$market->custom = $custom;
 		$market->marketcategory = $category;
-		$market->marketnbpiece = $nbpiece;
-		$market->city = $city;
+	$market->marketnbpiece = $nbpiece;
+	$market->marketetage =$etage;
+	$market->marketland=$superficie;
+	$market->marketcity=$city ;
+	$market->marketzip=$zip;
+	$market->marketyear=$year;
+	
 		// Before we can set metadata, we need to save the market post
 		if (!$market->save()) {
 			register_error(elgg_echo("market:error"));

@@ -99,7 +99,7 @@ if (empty($title) || empty($body)) {
 	}
 			
 	// Now see if we have a file icon
-	if ((isset($_FILES['upload']['name'])) && (substr_count($_FILES['upload']['type'],'image/'))) {
+	if (isset($_FILES['upload']) && (substr_count($_FILES['upload']['type'],'image/'))) {
 		$prefix = "market/".$market->guid;
 		
 		$filehandler = new ElggFile();

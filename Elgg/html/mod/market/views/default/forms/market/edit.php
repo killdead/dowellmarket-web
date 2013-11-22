@@ -34,15 +34,13 @@ if (isset($vars['entity'])) {
 	$tags = $vars['entity']->tags;
 	$access_id = $vars['entity']->access_id;
 	$nbpiece = $vars['entity']->marketnbpiece;
-}
+	$etage = $vars['entity']->marketetage;
+	$superficie = $vars['entity']->marketland;
+	$city = $vars['entity']->marketcity;
+	$zip = $vars['entity']->marketzip;
+	$year = $vars['entity']->marketyear;
 
-// Just in case we have some cached details
-if (isset($vars['markettitle'])) {
-	$title = $vars['markettitle'];
-	$body = $vars['marketbody'];
-	$price = $vars['marketprice'];
-	$custom = $vars['marketcustom'];
-	$tags = $vars['markettags'];
+	
 }
 
 
@@ -92,7 +90,7 @@ if (!empty($marketcategories)) {
  *
  * Nombre de pièces
  */
-echo "<dl><dt>";
+echo "<dl class='appartement maison'><dt>";
 echo "<label>" . elgg_echo("market:nbpiece") . "&nbsp;<small><small></small></small>";
 echo "</label></dt><dd>";
 echo elgg_view("input/text", array(
@@ -101,6 +99,19 @@ echo elgg_view("input/text", array(
 ));
 echo "</dd></dl>";
 
+
+/**
+ *
+ * Etage
+ */
+echo "<dl class='appartement'><dt>";
+echo "<label>" . elgg_echo("market:etage") . "&nbsp;<small><small></small></small>";
+echo "</label></dt><dd>";
+echo elgg_view("input/text", array(
+		"name" => "marketetage",
+		"value" => $etage,
+));
+echo "</dd></dl>";
 
 
 
@@ -111,7 +122,7 @@ echo "</dd></dl>";
  * Superficie
  */
 
-echo "<dl><dt>";
+echo "<dl class='appartement maison terrain'><dt>";
 echo "<label>" . elgg_echo("market:land") . "&nbsp;<small><small></small></small>";
 echo "</label></dt><dd>";
 echo elgg_view("input/text", array(
@@ -148,38 +159,23 @@ echo "<label>" . elgg_echo("market:zip") . "&nbsp;<small><small></small></small>
 echo "</label></dt><dd>";
 echo elgg_view("input/text", array(
 		"name" => "marketzip",
-		"value" => $city,
+		"value" => $zip,
 ));
 
 echo "</dd></dl>";
-
 
 /**
  *
  * Annee de construction
  */
-echo "<dl><dt>";
+echo "<dl class='appartement maison'><dt>";
 echo "<label>" . elgg_echo("market:year") . "&nbsp;<small><small></small></small>";
 echo "</label></dt><dd>";
 echo elgg_view("input/text", array(
 		"name" => "marketyear",
-		"value" => $city,
+		"value" => $year,
 ));
 echo "</dd></dl>";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 echo "<dl><dt>";
@@ -226,16 +222,16 @@ echo "</label></p>";*/
 echo "<dl><dt>";
 echo "<label>" . elgg_echo("market:uploadimages") . "<br /><small><small>" . elgg_echo("market:imagelimitation") . "</small></small><br />";
 echo "</label></dt><dd>";
-echo elgg_view("input/file",array('name' => 'upload01'));echo "<br />";
-echo elgg_view("input/file",array('name' => 'upload02'));echo "<br />";
-echo elgg_view("input/file",array('name' => 'upload03'));echo "<br />";
-echo elgg_view("input/file",array('name' => 'upload04'));echo "<br />";
-echo elgg_view("input/file",array('name' => 'upload05'));echo "<br />";
-echo elgg_view("input/file",array('name' => 'upload06'));echo "<br />";
-echo elgg_view("input/file",array('name' => 'upload07'));echo "<br />";
-echo elgg_view("input/file",array('name' => 'upload08'));echo "<br />";
-echo elgg_view("input/file",array('name' => 'upload09'));echo "<br />";
-echo elgg_view("input/file",array('name' => 'upload10'));echo "<br />";
+echo elgg_view("input/file",array('name' => 'upload'));echo "<br />";
+echo elgg_view("input/file",array('name' => 'upload'));echo "<br />";
+echo elgg_view("input/file",array('name' => 'upload'));echo "<br />";
+echo elgg_view("input/file",array('name' => 'upload'));echo "<br />";
+echo elgg_view("input/file",array('name' => 'upload'));echo "<br />";
+echo elgg_view("input/file",array('name' => 'upload'));echo "<br />";
+echo elgg_view("input/file",array('name' => 'upload'));echo "<br />";
+echo elgg_view("input/file",array('name' => 'upload'));echo "<br />";
+echo elgg_view("input/file",array('name' => 'upload'));echo "<br />";
+echo elgg_view("input/file",array('name' => 'upload'));echo "<br />";
 
 echo "<div style='display:none'>";
 echo "<p><label>" . elgg_echo('access') . "&nbsp;<small><small>" . elgg_echo("market:access:help") . "</small></small><br />";

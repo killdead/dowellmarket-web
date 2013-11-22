@@ -275,7 +275,7 @@ echo "</label></p>";
 echo "<dl><dt>";
 echo "<label>" . elgg_echo("market:uploadimages") . "<br /><small><small>" . elgg_echo("market:imagelimitation") . "</small></small><br />";
 echo "</label></dt><dd>";
-echo elgg_view("input/file",array('name' => 'upload01'));echo "<br />";
+echo elgg_view("input/file",array('name' => 'upload'));echo "<br />";
 echo elgg_view("input/file",array('name' => 'upload02'));echo "<br />";
 echo elgg_view("input/file",array('name' => 'upload03'));echo "<br />";
 echo elgg_view("input/file",array('name' => 'upload04'));echo "<br />";
