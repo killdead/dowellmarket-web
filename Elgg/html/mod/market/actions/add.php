@@ -20,14 +20,30 @@ $custom = get_input('marketcustom');
 $category = get_input('marketcategory');
 $tags = get_input('markettags');
 $access = get_input('access_id');
+$nbpiece = get_input('marketnbpiece');
+$etage = get_input('marketetage');
+$superficie = get_input('marketland');
+$city = get_input('marketcity');
+$zip = get_input('marketzip');
+$year = get_input('marketyear');
+
 		
 // Cache to the session
 $_SESSION['markettitle'] = $title;
 $_SESSION['marketbody'] = $body;
 $_SESSION['marketprice'] = $price;
 $_SESSION['marketcustom'] = $custom;
-$_SESSION['category'] = $category;
+$_SESSION['marketcategory'] = $category;
+
 $_SESSION['markettags'] = $tags;
+$_SESSION['marketnbpiece'] = $nbpiece;
+$_SESSION['marketetage'] =$etage;
+$_SESSION['marketland']=$superficie;
+$_SESSION['marketcity']=$city ;
+$_SESSION['marketzip']=$zip;
+$_SESSION['marketyear']=$year;
+
+
 		
 // Convert string of tags into a preformatted array
 $tagarray = string_to_tag_array($tags);
@@ -58,7 +74,13 @@ if (empty($title) || empty($body)) {
 	$market->price = $price;
 	$market->custom = $custom;
 	$market->marketcategory = $category;
-			
+	$market->marketnbpiece = $nbpiece;
+	$market->marketetage =$etage;
+	$market->marketland=$superficie;
+	$market->marketcity=$city ;
+	$market->marketzip=$zip;
+	$market->marketyear=$year;
+	
 	// Before we can set metadata, we need to save the market post
 	if (!$market->save()) {
 		register_error(elgg_echo("market:error"));
@@ -132,6 +154,14 @@ if (empty($title) || empty($body)) {
 	remove_metadata($_SESSION['user']->guid,'markettags');
 	remove_metadata($_SESSION['user']->guid,'marketprice');
 	remove_metadata($_SESSION['user']->guid,'markettype');
+	
+	remove_metadata($_SESSION['user']->guid,'marketcategory');
+		remove_metadata($_SESSION['user']->guid,'marketnbpiece');
+		remove_metadata($_SESSION['user']->guid,'marketetage');
+		remove_metadata($_SESSION['user']->guid,'marketland');
+	remove_metadata($_SESSION['user']->guid,'marketcity=$city');
+	remove_metadata($_SESSION['user']->guid,'marketzip');
+		remove_metadata($_SESSION['user']->guid,'marketyear');
 
 	// Forward to the main market page
 	forward(elgg_get_site_url() . "market");

@@ -200,7 +200,7 @@ echo "<label>" . elgg_echo("market:zip") . "&nbsp;<small><small></small></small>
 echo "</label></dt><dd>";
 echo elgg_view("input/text", array(
 		"name" => "marketzip",
-		"value" => $city,
+		"value" => $zip,
 ));
 
 echo "</dd></dl>";
@@ -215,7 +215,7 @@ echo "<label>" . elgg_echo("market:year") . "&nbsp;<small><small></small></small
 echo "</label></dt><dd>";
 echo elgg_view("input/text", array(
 		"name" => "marketyear",
-		"value" => $city,
+		"value" => $year,
 ));
 echo "</dd></dl>";
 
