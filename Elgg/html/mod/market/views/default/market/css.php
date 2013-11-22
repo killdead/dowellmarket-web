@@ -67,3 +67,14 @@ margin-top: 10px;
 
 border: 1px solid #432279;
 }
+
+.market-item-line {
+padding-top: 10px;
+padding-bottom: 3px;
+height: 1%;
+}
+
+.market-item-title {
+font-size:13pt;
+padding-bottom: 2px;
+}

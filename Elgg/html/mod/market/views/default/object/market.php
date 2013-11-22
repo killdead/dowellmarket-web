@@ -21,10 +21,10 @@ $currency = elgg_get_plugin_setting('market_currency', 'market');
 $owner = $marketpost->getOwnerEntity();
 $tu = $marketpost->time_updated;
 $container = $marketpost->getContainerEntity();
-$category = "<b>" . elgg_echo('market:category') . ":</b> " . elgg_echo("market:{$marketpost->marketcategory}");
-$excerpt = elgg_get_excerpt($marketpost->description);
-$city= "<b> ". elgg_echo('market:city'). ": </b>".$marketpost->city;
-
+$category = "<b>" . elgg_echo('market:category') . " : </b> " . elgg_echo("market:{$marketpost->marketcategory}");
+$excerpt = "<div class='market-item-line'>".elgg_get_excerpt($marketpost->description)."</div>";
+$city= "<b> ". elgg_echo('market:city'). " : </b>".$marketpost->city;
+$price="<b> ".elgg_echo('market:price') . " : </b>".$marketpost->price;
 
 $owner_link = elgg_view('output/url', array(
 	'href' => "market/owned/{$owner->username}",
@@ -133,18 +133,18 @@ HTML;
 			'href' => "market/view/{$marketpost->guid}/" . elgg_get_friendly_title($marketpost->title),
 			'text' => elgg_view('market/thumbnail', array('marketguid' => $marketpost->guid, 'size' => 'medium', 'tu' => $tu)),
 			));
-
-	$subtitle = "{$category}<br><b>" . elgg_echo('market:price') . ":</b> {$marketpost->price}";
-	$subtitle .= "<br>{$city}";
-	$subtitle .= "<br>{$author_text} {$date} {$comments_link}";
-
+	$subtitle .= "<div >{$author_text} {$date} {$comments_link}</div>";
+	$excerpt2 = "<div class='market-item-line'>{$price}</div>";
+	$excerpt2 .= "<div class='market-item-line'>{$category} <span style='margin-left:30px;'>{$city}</span></div>";
+	
+	$excerpt2 .= $excerpt;
 
 	$params = array(
 		'entity' => $marketpost,
 		'metadata' => $metadata,
 		'subtitle' => $subtitle,
 		'tags' => $tags,
-		'content' => $excerpt,
+		'content' => $excerpt2,
 	);
 	$params = $params + $vars;
 	$list_body = elgg_view('object/elements/summary', $params);

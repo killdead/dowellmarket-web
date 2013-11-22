@@ -47,7 +47,7 @@ if ($metadata) {
 	echo $metadata;
 }
 if ($title_link) {
-	echo "<h3>$title_link</h3>";
+	echo "<h3 class='market-item-title'>$title_link</h3>";
 }
 
 echo "<div class=\"elgg-subtext\">$subtitle</div>";
