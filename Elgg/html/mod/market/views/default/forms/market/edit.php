@@ -84,10 +84,9 @@ echo "</dd></dl>";
 $marketcategories = elgg_view('market/marketcategories',$vars);
 if (!empty($marketcategories)) {
 	echo "<dl>";
-	echo "<p>{$marketcategories}</p>";
+	echo "{$marketcategories}";
 	echo "</dl>";
 }
-echo "<br><br>";
 
 /**
  *
